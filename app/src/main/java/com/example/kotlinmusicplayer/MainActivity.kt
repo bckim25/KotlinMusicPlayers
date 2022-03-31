@@ -5,6 +5,7 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.util.Log
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mp = MediaPlayer.create(this, R.raw.music)
+        mp = MediaPlayer.create(this, R.raw.forget16026)
         mp.isLooping = true
         mp.setVolume(0.5f, 0.5f)
         totalTime = mp.duration
@@ -104,7 +105,8 @@ class MainActivity : AppCompatActivity() {
         return timeLabel
     }
 
-    fun playBtnClick(v: android.view.View) {
+    fun playBtnClick(v: android.view.View?) {
+        Log.d("리소스",mp.isPlaying.toString())
         if (mp.isPlaying) {
             //Stop
             mp.pause()
