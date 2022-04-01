@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
         )
+
+
+
         //Position Bar
         positionBar.max = totalTime
         positionBar.setOnSeekBarChangeListener(
