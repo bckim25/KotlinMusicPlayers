@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     override fun onStopTrackingTouch(p0: SeekBar?) {
+                        Log.d("시크바","seekbar stop touch!!!!")
                     }
                 }
         )
